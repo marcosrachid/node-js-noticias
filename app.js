@@ -1,17 +1,7 @@
 var app = require('./config/server');
-
-app.get('/', function(req, res){
-	res.render("home/index")
-});
-app.get('/formulario_inclusao_noticia', function(req, res){
-	res.render("admin/form_add_noticia")
-});
-app.get('/noticias', function(req, res){
-	res.render("noticias/noticias")
-});
-app.get('/noticia', function(req, res){
-	res.render("noticias/noticia")
-});
+require('./app/routes/noticias')(app);
+require('./app/routes/formulario_inclusao_noticia')(app);
+require('./app/routes/home')(app);
 
 app.listen(3000, function(){
 	console.log("Running...");
