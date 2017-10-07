@@ -10,3 +10,14 @@ npm install mysql --save
 npm install consign --save
 npm install -g nodemon
 ```
+
+## Execution
+```bash
+node app.js
+```
+
+or
+
+```bash
+nodemon app
+```
