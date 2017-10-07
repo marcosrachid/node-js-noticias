@@ -21,3 +21,13 @@ or
 ```bash
 nodemon app
 ```
+
+## Basic Configurations
+
+### Database
+
+- Database configuration on **./config/dbConnection.js**.
+- Configure __host__.
+- Configure __user__.
+- Configure __password__.
+- Configure __database__.
