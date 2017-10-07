@@ -10,8 +10,5 @@ module.exports = function(app){
 			res.render("noticias/noticias", {noticias: result});
 		});
 	});
-	app.get('/noticia', function(req, res){
-		res.render("noticias/noticia")
-	});
 
 }
