@@ -1,13 +1,13 @@
 //var dbConnection = require('../../config/dbConnection');
 
-module.exports = function(app){
+module.exports = function(application){
 
-	app.get('/noticias', function(req, res){
+	application.get('/noticias', function(req, res){
 
-		var connection = app.config.dbConnection();
-		var noticiasModel = app.app.models.noticiasModel;
+		var connection = application.config.dbConnection();
+		var noticiasDAO = new application.app.dao.NoticiasDAO(connection);
 
-		noticiasModel.getNoticias(connection, function(erro, result){
+		noticiasDAO.getNoticias(function(erro, result){
 			res.render("noticias/noticias", {noticias: result});
 		});
 		
