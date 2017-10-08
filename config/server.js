@@ -13,7 +13,8 @@ app.use(expressValidator());
 consign()
 	.include('./app/routes')
 	.then('config/dbConnection.js')
-	.then('app/dao')
+	.then('app/model')
+	.then('app/controllers')
 	.into(app);
 
 module.exports = app;
