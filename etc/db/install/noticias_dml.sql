@@ -1,1 +1,0 @@
-insert into noticias(titulo, noticia) values ('titulo da noticia', 'conteudo da noticia');
